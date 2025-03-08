@@ -16,11 +16,11 @@ export const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProp
     const baseStyles = "font-medium transition-all duration-200 ease-in-out relative overflow-hidden group";
     
     const variantStyles = {
-      primary: "bg-orbit-blue-600 text-white hover:bg-orbit-blue-700 shadow-sm",
-      secondary: "bg-orbit-gray-100 text-orbit-gray-900 hover:bg-orbit-gray-200",
-      outline: "bg-transparent border border-orbit-blue-600 text-orbit-blue-600 hover:bg-orbit-blue-50",
-      ghost: "bg-transparent text-orbit-blue-600 hover:bg-orbit-blue-50",
-      link: "bg-transparent text-orbit-blue-600 hover:underline p-0 h-auto",
+      primary: "orbit-gradient-bg text-white hover:opacity-90 shadow-sm",
+      secondary: "bg-orbit-purple-600 text-white hover:bg-orbit-purple-700",
+      outline: "bg-transparent border border-orbit-orange-500 text-orbit-orange-500 hover:bg-orbit-orange-500/10",
+      ghost: "bg-transparent text-orbit-orange-500 hover:bg-orbit-orange-500/10",
+      link: "bg-transparent text-orbit-orange-500 hover:underline p-0 h-auto",
     };
     
     const sizeStyles = {

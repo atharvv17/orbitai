@@ -32,7 +32,7 @@ export const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md",
         {
-          "bg-white/70 shadow-sm py-3": isScrolled,
+          "bg-orbit-cosmos-400/70 shadow-sm py-3": isScrolled,
           "bg-transparent py-5": !isScrolled,
         }
       )}
@@ -40,8 +40,9 @@ export const Navbar = () => {
       <Container>
         <nav className="flex items-center justify-between">
           <a href="#" className="relative z-10">
-            <h1 className="text-2xl font-bold text-orbit-blue-600">
-              Orbit<span className="text-orbit-gray-900">AI</span>
+            <h1 className="text-2xl font-bold">
+              <span className="orbit-gradient-text">Orbit</span>
+              <span className="text-white">AI</span>
             </h1>
           </a>
 
@@ -52,7 +53,7 @@ export const Navbar = () => {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="text-orbit-gray-700 hover:text-orbit-blue-600 font-medium text-sm transition-colors flex items-center"
+                    className="text-white/80 hover:text-orbit-orange-500 font-medium text-sm transition-colors flex items-center"
                   >
                     {item.icon && <item.icon size={16} className="mr-1" />}
                     {item.label}
@@ -65,7 +66,7 @@ export const Navbar = () => {
 
           {/* Mobile Navigation Toggle */}
           <button
-            className="md:hidden z-20 text-orbit-gray-800"
+            className="md:hidden z-20 text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
           >
@@ -75,7 +76,7 @@ export const Navbar = () => {
           {/* Mobile Navigation Overlay */}
           <div
             className={cn(
-              "fixed inset-0 bg-white z-10 flex flex-col justify-center items-center transition-transform duration-300 md:hidden",
+              "fixed inset-0 bg-orbit-cosmos-300 z-10 flex flex-col justify-center items-center transition-transform duration-300 md:hidden",
               {
                 "translate-x-0": mobileMenuOpen,
                 "translate-x-full": !mobileMenuOpen,
@@ -87,7 +88,7 @@ export const Navbar = () => {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="text-orbit-gray-900 text-lg font-medium flex items-center"
+                    className="text-white text-lg font-medium flex items-center"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.icon && <item.icon size={18} className="mr-2" />}

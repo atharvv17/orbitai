@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 210 33% 99%;
-    --foreground: 224 71% 4%;
+    --background: 260 35% 10%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 260 35% 12%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 260 35% 12%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 221 83% 53%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 35 100% 50%;
+    --primary-foreground: 260 35% 12%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 270 100% 65%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 260 35% 20%;
+    --muted-foreground: 0 0% 80%;
 
-    --accent: 217 40% 90%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 20 100% 60%;
+    --accent-foreground: 260 35% 12%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221 83% 53%;
+    --border: 260 35% 20%;
+    --input: 260 35% 20%;
+    --ring: 35 100% 50%;
 
     --radius: 0.75rem;
   }
@@ -77,7 +77,13 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-orbit-cosmos-300 text-foreground font-sans antialiased;
+    background-image: url('/lovable-uploads/b4bcb4bc-95b5-463a-8d2e-bf675d12903a.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #120B1A;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -87,11 +93,11 @@
 
 @layer components {
   .glass-card {
-    @apply backdrop-blur-xl bg-white/70 border border-white/20 shadow-sm;
+    @apply backdrop-blur-xl bg-orbit-cosmos-400/70 border border-white/10 shadow-sm;
   }
   
   .section-padding {
-    @apply py-12 md:py-16;
+    @apply py-8 md:py-12;
   }
   
   .fade-in {
@@ -105,64 +111,14 @@
   .fade-in-down {
     @apply animate-fade-in-down;
   }
+
+  .orbit-gradient-text {
+    @apply bg-gradient-to-r from-orbit-yellow-500 via-orbit-orange-500 to-orbit-purple-500 text-transparent bg-clip-text;
+  }
+
+  .orbit-gradient-bg {
+    @apply bg-gradient-to-r from-orbit-yellow-500 via-orbit-orange-500 to-orbit-purple-500;
+  }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(241, 245, 249, 0.8);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.5);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.8);
-}
-
-/* Removing outline for mouse users but keeping it for keyboard navigation */
-:focus:not(:focus-visible) {
-  outline: none;
-}
-
-:focus-visible {
-  outline: 2px solid hsl(var(--ring));
-  outline-offset: 2px;
-}
-
-/* Custom animations */
-.hover-float {
-  transition: transform 0.3s ease;
-}
-
-.hover-float:hover {
-  transform: translateY(-5px);
-}
-
-.text-balance {
-  text-wrap: balance;
-}
-
-.text-pretty {
-  text-wrap: pretty;
-}
-
-/* Card hover effects */
-.card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-}
+/* ... keep existing code (scrolling, animations, and card hover effects) */
