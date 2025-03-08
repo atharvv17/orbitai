@@ -1,3 +1,4 @@
+
 import { Container } from "@/components/ui/Container";
 import { Search, Settings, Rocket, TrendingUp } from "lucide-react";
 const steps = [{
@@ -44,7 +45,7 @@ export const HowItWorks = () => {
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
-            {steps.map((step, index) => <div key={index} className="relative z-10 flex flex-col items-center text-center animate-fade-in-up" style={{
+            {steps.map((step, index) => <div key={index} className="relative z-10 flex flex-col items-center text-center animate-fade-in-up mt-12" style={{
             animationDelay: `${step.delay}ms`
           }}>
                 <div className="w-16 h-16 rounded-full bg-orbit-cosmos-400/70 shadow-sm border border-orbit-purple-400/20 flex items-center justify-center mb-6 transition-all duration-500 hover:shadow-lg hover:scale-110">
