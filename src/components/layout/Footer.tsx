@@ -1,6 +1,6 @@
 
 import { Container } from "@/components/ui/Container";
-import { Linkedin, Twitter, Mail, Phone } from "lucide-react";
+import { Linkedin, Twitter, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -21,7 +21,7 @@ export const Footer = () => {
               <a href="#" className="text-orbit-gray-300 hover:text-white transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="mailto:growth@orbitai.com" className="text-orbit-gray-300 hover:text-white transition-colors">
+              <a href="mailto:orbitautogen@gmail.com" className="text-orbit-gray-300 hover:text-white transition-colors">
                 <Mail size={20} />
               </a>
             </div>
@@ -79,12 +79,8 @@ export const Footer = () => {
             </h3>
             <div className="space-y-3">
               <p className="flex items-center text-orbit-gray-300">
-                <Phone size={16} className="mr-2" />
-                1-800-ORBITAI
-              </p>
-              <p className="flex items-center text-orbit-gray-300">
                 <Mail size={16} className="mr-2" />
-                growth@orbitai.com
+                orbitautogen@gmail.com
               </p>
             </div>
           </div>

@@ -181,9 +181,11 @@ export const Solutions = () => {
                 <p className="text-orbit-yellow-100/80 mb-6">
                   {solution.description}
                 </p>
-                <CustomButton variant="outline">
-                  Learn More
-                </CustomButton>
+                <a href="https://calendly.com/orbitautogen/45min?month=2025-03" target="_blank" rel="noopener noreferrer">
+                  <CustomButton variant="outline">
+                    Learn More
+                  </CustomButton>
+                </a>
               </div>
               
               <div 
@@ -199,9 +201,11 @@ export const Solutions = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <CustomButton size="lg">
-            See Your Custom Growth Plan
-          </CustomButton>
+          <a href="https://calendly.com/orbitautogen/45min?month=2025-03" target="_blank" rel="noopener noreferrer">
+            <CustomButton size="lg">
+              See Your Custom Growth Plan
+            </CustomButton>
+          </a>
         </div>
       </Container>
     </section>

@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { CustomButton } from "@/components/ui/CustomButton";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -64,21 +64,11 @@ export const Contact = () => {
             <div className="space-y-6 mb-8">
               <div className="flex items-center">
                 <div className="w-10 h-10 rounded-full bg-orbit-yellow-500/10 flex items-center justify-center mr-4">
-                  <Phone className="text-orbit-yellow-300" size={20} />
-                </div>
-                <div>
-                  <div className="text-sm text-orbit-yellow-100/70">Call us at</div>
-                  <div className="font-medium text-orbit-yellow-200">1-800-ORBITAI</div>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="w-10 h-10 rounded-full bg-orbit-yellow-500/10 flex items-center justify-center mr-4">
                   <Mail className="text-orbit-yellow-300" size={20} />
                 </div>
                 <div>
                   <div className="text-sm text-orbit-yellow-100/70">Email us at</div>
-                  <div className="font-medium text-orbit-yellow-200">growth@orbitai.com</div>
+                  <div className="font-medium text-orbit-yellow-200">orbitautogen@gmail.com</div>
                 </div>
               </div>
             </div>
@@ -103,7 +93,7 @@ export const Contact = () => {
           </div>
           
           <div className="glass-card bg-orbit-cosmos-300/30 rounded-xl p-8 border border-orbit-purple-400/20 backdrop-blur-md animate-fade-in-up delay-100">
-            <h3 className="text-xl font-semibold mb-6 text-orbit-yellow-200">Get a Personalized Quote</h3>
+            <h3 className="text-xl font-semibold mb-6 text-orbit-yellow-200">Contact Us</h3>
             <form onSubmit={handleSubmit}>
               <div className="space-y-4">
                 <div>

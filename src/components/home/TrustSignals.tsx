@@ -1,6 +1,6 @@
 
 import { Container } from "@/components/ui/Container";
-import { Star, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { CustomButton } from "@/components/ui/CustomButton";
 import { CaseStudyCard } from "./case-studies/CaseStudyCard";
 
@@ -78,10 +78,12 @@ export const TrustSignals = () => {
         </div>
         
         <div className="text-center mt-16">
-          <CustomButton size="lg" className="animate-pulse-light hover:animate-none hover:scale-105 transition-transform duration-300">
-            See How Orbit AI Can Deliver These Results
-            <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
-          </CustomButton>
+          <a href="https://calendly.com/orbitautogen/45min?month=2025-03" target="_blank" rel="noopener noreferrer">
+            <CustomButton size="lg" className="animate-pulse-light hover:animate-none hover:scale-105 transition-transform duration-300">
+              See How Orbit AI Can Deliver These Results
+              <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
+            </CustomButton>
+          </a>
         </div>
       </Container>
     </section>

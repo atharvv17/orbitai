@@ -1,3 +1,4 @@
+
 import { Container } from "@/components/ui/Container";
 import { CustomButton } from "@/components/ui/CustomButton";
 import { ArrowRight } from "lucide-react";
@@ -23,13 +24,17 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-200">
-            <CustomButton size="lg" className="w-full sm:w-auto hover:scale-105 transition-transform duration-300">
-              Discover How Orbit AI Works
-              <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
-            </CustomButton>
-            <CustomButton variant="outline" size="lg" className="w-full sm:w-auto hover:scale-105 transition-transform duration-300">
-              Book a Demo
-            </CustomButton>
+            <a href="#how-it-works">
+              <CustomButton size="lg" className="w-full sm:w-auto hover:scale-105 transition-transform duration-300">
+                Discover How Orbit AI Works
+                <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
+              </CustomButton>
+            </a>
+            <a href="https://calendly.com/orbitautogen/45min?month=2025-03" target="_blank" rel="noopener noreferrer">
+              <CustomButton variant="outline" size="lg" className="w-full sm:w-auto hover:scale-105 transition-transform duration-300">
+                Book a Demo
+              </CustomButton>
+            </a>
           </div>
         </div>
         
