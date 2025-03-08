@@ -1,27 +1,32 @@
 
 import { Container } from "@/components/ui/Container";
 import { Search, Settings, Rocket, TrendingUp } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const steps = [{
   icon: Search,
   title: "Discovery",
   description: "We analyze your practice's goals and bottlenecks.",
-  delay: "0"
+  delay: "0",
+  animation: "animate-pulse-light"
 }, {
   icon: Settings,
   title: "Customization",
   description: "Tailor the AI Caller and digital tools to your client base.",
-  delay: "100"
+  delay: "100",
+  animation: "animate-rotate-slow"
 }, {
   icon: Rocket,
   title: "Deployment",
   description: "Launch with zero disruption to your workflow.",
-  delay: "200"
+  delay: "200",
+  animation: "animate-rocket"
 }, {
   icon: TrendingUp,
   title: "Growth",
   description: "Watch qualified leads roll in and your influence expand.",
-  delay: "300"
+  delay: "300",
+  animation: "animate-float"
 }];
 
 export const HowItWorks = () => {
@@ -55,8 +60,17 @@ export const HowItWorks = () => {
                   animationDelay: `${step.delay}ms`
                 }}
               >
-                <div className="w-16 h-16 rounded-full bg-orbit-cosmos-400/70 shadow-sm border border-orbit-purple-400/20 flex items-center justify-center mb-8 transition-all duration-500 hover:shadow-lg hover:scale-110">
-                  <step.icon className="text-orbit-orange-400" size={24} />
+                <div className={cn(
+                  "w-16 h-16 rounded-full bg-orbit-cosmos-400/70 shadow-sm border border-orbit-purple-400/20 flex items-center justify-center mb-8 transition-all duration-500 hover:shadow-lg hover:scale-110",
+                  step.title === "Deployment" ? "rocket-container" : ""
+                )}>
+                  <step.icon 
+                    className={cn(
+                      "text-orbit-orange-400", 
+                      step.animation
+                    )} 
+                    size={24} 
+                  />
                 </div>
                 
                 {/* Arrow indicators between steps */}
@@ -77,5 +91,67 @@ export const HowItWorks = () => {
           </div>
         </div>
       </Container>
+
+      <style jsx global>{`
+        @keyframes rocket {
+          0% {
+            transform: translateY(0);
+            opacity: 0.7;
+          }
+          50% {
+            transform: translateY(-8px);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 0.7;
+          }
+        }
+        
+        .animate-rocket {
+          animation: rocket 2s ease-in-out infinite;
+        }
+        
+        .rocket-container {
+          position: relative;
+        }
+        
+        .rocket-container::after {
+          content: "";
+          position: absolute;
+          bottom: -4px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 10px;
+          height: 15px;
+          background: linear-gradient(to bottom, rgba(255, 115, 61, 0.7), transparent);
+          opacity: 0;
+          border-radius: 50%;
+          animation: rocket-flame 2s ease-in-out infinite;
+        }
+        
+        @keyframes rocket-flame {
+          0% {
+            height: 0;
+            opacity: 0;
+          }
+          25% {
+            height: 15px;
+            opacity: 0.7;
+          }
+          50% {
+            height: 25px;
+            opacity: 1;
+          }
+          75% {
+            height: 15px;
+            opacity: 0.7;
+          }
+          100% {
+            height: 0;
+            opacity: 0;
+          }
+        }
+      `}</style>
     </section>;
 };
