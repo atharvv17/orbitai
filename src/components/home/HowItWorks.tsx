@@ -92,7 +92,8 @@ export const HowItWorks = () => {
         </div>
       </Container>
 
-      <style jsx global>{`
+      <style>
+        {`
         @keyframes rocket {
           0% {
             transform: translateY(0);
@@ -152,6 +153,7 @@ export const HowItWorks = () => {
             opacity: 0;
           }
         }
-      `}</style>
+        `}
+      </style>
     </section>;
 };
