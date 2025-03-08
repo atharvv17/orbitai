@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 import { Container } from "@/components/ui/Container";
 import { CustomButton } from "@/components/ui/CustomButton";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, DollarSign } from "lucide-react";
 
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Solutions", href: "#solutions" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Pricing", href: "#value-stacking", icon: DollarSign },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -51,8 +52,9 @@ export const Navbar = () => {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="text-orbit-gray-700 hover:text-orbit-blue-600 font-medium text-sm transition-colors"
+                    className="text-orbit-gray-700 hover:text-orbit-blue-600 font-medium text-sm transition-colors flex items-center"
                   >
+                    {item.icon && <item.icon size={16} className="mr-1" />}
                     {item.label}
                   </a>
                 </li>
@@ -85,9 +87,10 @@ export const Navbar = () => {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="text-orbit-gray-900 text-lg font-medium"
+                    className="text-orbit-gray-900 text-lg font-medium flex items-center"
                     onClick={() => setMobileMenuOpen(false)}
                   >
+                    {item.icon && <item.icon size={18} className="mr-2" />}
                     {item.label}
                   </a>
                 </li>
