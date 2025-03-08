@@ -7,7 +7,6 @@ import { TrustSignals } from "@/components/home/TrustSignals";
 import { About } from "@/components/home/About";
 import { Solutions } from "@/components/home/Solutions";
 import { HowItWorks } from "@/components/home/HowItWorks";
-import { ValueStacking } from "@/components/home/ValueStacking";
 import { Contact } from "@/components/home/Contact";
 
 const Index = () => {
@@ -21,7 +20,6 @@ const Index = () => {
         <About />
         <Solutions />
         <HowItWorks />
-        <ValueStacking />
         <Contact />
       </main>
       <Footer />
