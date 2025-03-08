@@ -1,8 +1,6 @@
-
 import { Container } from "@/components/ui/Container";
 import { CustomButton } from "@/components/ui/CustomButton";
 import { ArrowRight } from "lucide-react";
-
 export const Hero = () => {
   return <section id="home" className="pt-32 pb-12 md:pt-36 md:pb-16 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_50%_at_50%_50%,rgba(139,112,255,0.1)_0%,rgba(255,255,255,0)_100%)]"></div>
@@ -37,16 +35,7 @@ export const Hero = () => {
         
         <div className="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl animate-fade-in-up delay-300">
           {/* Dashboard image placeholder with animation */}
-          <div className="aspect-video bg-orbit-cosmos-400/70 backdrop-blur-sm border border-orbit-purple-400/20 rounded-xl overflow-hidden relative animate-float">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-orbit-yellow-200 font-semibold">AI-Powered Dashboard</div>
-            </div>
-            
-            {/* Animated elements */}
-            <div className="absolute top-5 left-5 w-64 h-10 rounded-lg bg-orbit-cosmos-300/80 animate-pulse-light delay-300"></div>
-            <div className="absolute top-20 left-5 w-40 h-40 rounded-lg bg-orbit-cosmos-300/80 animate-pulse-light delay-500"></div>
-            <div className="absolute top-20 right-5 w-48 h-64 rounded-lg bg-orbit-cosmos-300/80 animate-pulse-light delay-700"></div>
-          </div>
+          
         </div>
       </Container>
     </section>;
