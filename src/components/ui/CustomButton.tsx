@@ -16,8 +16,8 @@ export const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProp
     const baseStyles = "font-medium transition-all duration-200 ease-in-out relative overflow-hidden group";
     
     const variantStyles = {
-      primary: "orbit-gradient-bg text-white hover:opacity-90 shadow-sm",
-      secondary: "bg-orbit-purple-600 text-white hover:bg-orbit-purple-700",
+      primary: "orbit-gradient-bg text-orbit-cosmos-400 hover:opacity-90 shadow-sm",
+      secondary: "bg-orbit-purple-600 text-orbit-yellow-100 hover:bg-orbit-purple-700",
       outline: "bg-transparent border border-orbit-orange-500 text-orbit-orange-500 hover:bg-orbit-orange-500/10",
       ghost: "bg-transparent text-orbit-orange-500 hover:bg-orbit-orange-500/10",
       link: "bg-transparent text-orbit-orange-500 hover:underline p-0 h-auto",
@@ -38,7 +38,7 @@ export const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProp
           variantStyles[variant],
           sizeStyles[size],
           {
-            "after:absolute after:inset-0 after:bg-white/10 after:opacity-0 hover:after:opacity-100 after:transition-opacity":
+            "after:absolute after:inset-0 after:bg-orbit-yellow-100/10 after:opacity-0 hover:after:opacity-100 after:transition-opacity":
               variant === "primary" && !asChild,
           },
           className

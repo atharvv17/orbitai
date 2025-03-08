@@ -42,7 +42,7 @@ export const Navbar = () => {
           <a href="#" className="relative z-10">
             <h1 className="text-2xl font-bold">
               <span className="orbit-gradient-text">Orbit</span>
-              <span className="text-white">AI</span>
+              <span className="text-cosmos">AI</span>
             </h1>
           </a>
 
@@ -53,7 +53,7 @@ export const Navbar = () => {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="text-white/80 hover:text-orbit-orange-500 font-medium text-sm transition-colors flex items-center"
+                    className="text-orbit-yellow-200/80 hover:text-orbit-orange-500 font-medium text-sm transition-colors flex items-center"
                   >
                     {item.icon && <item.icon size={16} className="mr-1" />}
                     {item.label}
@@ -66,7 +66,7 @@ export const Navbar = () => {
 
           {/* Mobile Navigation Toggle */}
           <button
-            className="md:hidden z-20 text-white"
+            className="md:hidden z-20 text-orbit-yellow-200"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
           >
@@ -88,7 +88,7 @@ export const Navbar = () => {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="text-white text-lg font-medium flex items-center"
+                    className="text-orbit-yellow-200 text-lg font-medium flex items-center"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.icon && <item.icon size={18} className="mr-2" />}

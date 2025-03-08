@@ -119,6 +119,22 @@
   .orbit-gradient-bg {
     @apply bg-gradient-to-r from-orbit-yellow-500 via-orbit-orange-500 to-orbit-purple-500;
   }
+  
+  .text-cosmos {
+    @apply text-orbit-yellow-200/90;
+  }
+  
+  .text-cosmos-muted {
+    @apply text-orbit-yellow-100/60;
+  }
+  
+  .border-cosmos {
+    @apply border-orbit-purple-400/20;
+  }
+  
+  .bg-cosmos-card {
+    @apply bg-orbit-cosmos-400/40 backdrop-blur-sm border-orbit-purple-400/10;
+  }
 }
 
 /* ... keep existing code (scrolling, animations, and card hover effects) */
