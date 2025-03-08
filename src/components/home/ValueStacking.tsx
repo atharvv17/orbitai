@@ -211,7 +211,7 @@ export const ValueStacking = () => {
                 <th className="px-4 py-5 text-left text-orbit-yellow-200">FEATURE</th>
                 <th className="px-4 py-5 text-left text-orbit-yellow-200">REPLACES</th>
                 <th className="px-4 py-5 text-left text-orbit-yellow-200">PREMIUM TOOLS COST</th>
-                <th className="px-4 py-5 text-left text-orbit-yellow-200">OUR SERVICES</th>
+                <th className="px-4 py-5 text-left text-orbit-yellow-200">OUR SERVICE</th>
               </tr>
             </thead>
             <tbody>
