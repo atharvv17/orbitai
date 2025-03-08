@@ -26,7 +26,7 @@ const benefits = [
 
 export const Benefits = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-12 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-orbit-gray-50"></div>
       <Container>
         <div className="text-center mb-16">

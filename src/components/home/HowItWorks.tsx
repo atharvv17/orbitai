@@ -31,7 +31,7 @@ const steps = [
 
 export const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-20 bg-orbit-gray-50 relative overflow-hidden">
+    <section id="how-it-works" className="py-12 bg-orbit-gray-50 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-white to-transparent"></div>
       <Container>
         <div className="text-center mb-16 max-w-3xl mx-auto">

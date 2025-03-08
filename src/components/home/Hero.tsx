@@ -1,8 +1,9 @@
+
 import { Container } from "@/components/ui/Container";
 import { CustomButton } from "@/components/ui/CustomButton";
 import { ArrowRight } from "lucide-react";
 export const Hero = () => {
-  return <section id="home" className="pt-32 pb-20 md:pt-36 md:pb-28 relative overflow-hidden">
+  return <section id="home" className="pt-32 pb-12 md:pt-36 md:pb-16 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_50%_at_50%_50%,rgba(37,112,255,0.1)_0%,rgba(255,255,255,0)_100%)]"></div>
       <div className="absolute inset-y-0 right-0 -z-10 w-[40%] bg-[radial-gradient(90%_90%_at_100%_0%,rgba(120,119,198,0.3)_0%,rgba(255,255,255,0)_100%)]"></div>
       

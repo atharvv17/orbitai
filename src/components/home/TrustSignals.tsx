@@ -5,7 +5,7 @@ import { CustomButton } from "@/components/ui/CustomButton";
 
 export const TrustSignals = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 bg-white">
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">

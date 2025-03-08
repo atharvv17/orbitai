@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 
 export const About = () => {
   return (
-    <section id="about" className="py-20 bg-orbit-gray-50 relative overflow-hidden">
+    <section id="about" className="py-12 bg-orbit-gray-50 relative overflow-hidden">
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-orbit-blue-100 rounded-full opacity-20 blur-3xl"></div>
       <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-orbit-blue-200 rounded-full opacity-20 blur-3xl"></div>
       
