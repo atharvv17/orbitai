@@ -42,6 +42,11 @@ export const HowItWorks = () => {
 
         <div className="relative">
           <div className="grid md:grid-cols-4 gap-8">
+            {/* Continuous line below all icons */}
+            <div className="hidden md:block absolute top-20 left-0 right-0 h-1 bg-orbit-purple-400/20 z-0">
+              <div className="h-full bg-orbit-purple-400/60 w-0 animate-progress"></div>
+            </div>
+            
             {steps.map((step, index) => (
               <div 
                 key={index} 
@@ -50,23 +55,20 @@ export const HowItWorks = () => {
                   animationDelay: `${step.delay}ms`
                 }}
               >
-                <div className="w-16 h-16 rounded-full bg-orbit-cosmos-400/70 shadow-sm border border-orbit-purple-400/20 flex items-center justify-center mb-3 transition-all duration-500 hover:shadow-lg hover:scale-110">
+                <div className="w-16 h-16 rounded-full bg-orbit-cosmos-400/70 shadow-sm border border-orbit-purple-400/20 flex items-center justify-center mb-8 transition-all duration-500 hover:shadow-lg hover:scale-110">
                   <step.icon className="text-orbit-orange-400" size={24} />
                 </div>
                 
-                {/* Connector Line with animation - moved between icon and text */}
+                {/* Arrow indicators between steps */}
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 right-0 w-full h-1 bg-orbit-purple-400/20 z-0" style={{ left: '58%', width: '42%' }}>
-                    <div className="h-full bg-orbit-purple-400/60 w-0 animate-progress"></div>
-                    <div className="absolute top-0 right-0 transform translate-x-1/2 rotate-[-90deg] animate-pulse-light">
-                      <svg width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 0L20 4L16 8V0Z" fill="#A693FF" />
-                      </svg>
-                    </div>
+                  <div className="hidden md:block absolute top-20 right-0 transform translate-x-1/2 translate-y-px rotate-[-90deg] animate-pulse-light">
+                    <svg width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 0L20 4L16 8V0Z" fill="#A693FF" />
+                    </svg>
                   </div>
                 )}
                 
-                <div className="mt-5">
+                <div className="mt-4">
                   <h3 className="text-xl font-semibold mb-2 text-orbit-yellow-200">{step.title}</h3>
                   <p className="text-orbit-yellow-100/80">{step.description}</p>
                 </div>
