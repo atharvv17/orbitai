@@ -47,8 +47,10 @@ export const HowItWorks = () => {
         </div>
 
         <div className="relative">
-          {/* Connector Line */}
-          <div className="hidden md:block absolute top-24 left-0 right-0 h-1 bg-orbit-purple-400/20 z-0"></div>
+          {/* Connector Line with animation */}
+          <div className="hidden md:block absolute top-24 left-0 right-0 h-1 bg-orbit-purple-400/20 z-0">
+            <div className="h-full bg-orbit-purple-400/60 w-0 animate-progress"></div>
+          </div>
           
           <div className="grid md:grid-cols-4 gap-8">
             {steps.map((step, index) => (
@@ -57,14 +59,14 @@ export const HowItWorks = () => {
                 className="relative z-10 flex flex-col items-center text-center animate-fade-in-up"
                 style={{ animationDelay: `${step.delay}ms` }}
               >
-                <div className="w-16 h-16 rounded-full bg-orbit-cosmos-400/70 shadow-sm border border-orbit-purple-400/20 flex items-center justify-center mb-6">
+                <div className="w-16 h-16 rounded-full bg-orbit-cosmos-400/70 shadow-sm border border-orbit-purple-400/20 flex items-center justify-center mb-6 transition-all duration-500 hover:shadow-lg hover:scale-110">
                   <step.icon className="text-orbit-orange-400" size={24} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-orbit-yellow-200">{step.title}</h3>
                 <p className="text-orbit-yellow-100/80">{step.description}</p>
                 
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-24 right-0 transform translate-x-1/2 rotate-[-90deg]">
+                  <div className="hidden md:block absolute top-24 right-0 transform translate-x-1/2 rotate-[-90deg] animate-pulse-light">
                     <svg width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M16 0L20 4L16 8V0Z" fill="#A693FF" />
                     </svg>
@@ -75,18 +77,18 @@ export const HowItWorks = () => {
           </div>
         </div>
         
-        <div className="mt-16 bg-orbit-cosmos-400/70 rounded-xl p-8 border border-orbit-purple-400/20 shadow-sm animate-fade-in backdrop-blur-sm">
+        <div className="mt-16 bg-orbit-cosmos-400/70 rounded-xl p-8 border border-orbit-purple-400/20 shadow-sm animate-fade-in backdrop-blur-sm transform transition-all duration-500 hover:shadow-lg">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center md:text-left">
-              <div className="text-4xl font-bold text-orbit-orange-400 mb-2">75%</div>
+              <div className="text-4xl font-bold text-orbit-orange-400 mb-2 animate-count-up" data-value="75">0</div>
               <p className="text-orbit-yellow-200">reduction in time spent on client follow-ups</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orbit-orange-400 mb-2">40%</div>
+              <div className="text-4xl font-bold text-orbit-orange-400 mb-2 animate-count-up" data-value="40">0</div>
               <p className="text-orbit-yellow-200">increase in qualified leads within 90 days</p>
             </div>
             <div className="text-center md:text-right">
-              <div className="text-4xl font-bold text-orbit-orange-400 mb-2">2x</div>
+              <div className="text-4xl font-bold text-orbit-orange-400 mb-2 animate-count-up" data-value="200">0</div>
               <p className="text-orbit-yellow-200">social engagement for advisors using our system</p>
             </div>
           </div>

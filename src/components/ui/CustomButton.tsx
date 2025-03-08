@@ -48,6 +48,7 @@ export const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProp
         <span className="relative z-10 flex items-center justify-center gap-2">
           {children}
         </span>
+        <span className="absolute inset-0 bg-gradient-to-r from-orbit-yellow-400 via-orbit-orange-400 to-orbit-purple-400 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
       </Button>
     );
   }

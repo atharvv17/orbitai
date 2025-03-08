@@ -59,10 +59,10 @@ export const TrustSignals = () => {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_50%_at_50%_50%,rgba(139,112,255,0.1)_0%,rgba(255,255,255,0)_100%)]"></div>
       <Container>
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-orbit-yellow-200">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-orbit-yellow-200 animate-fade-in-down">
             Real Results from Real Advisors
           </h2>
-          <p className="text-orbit-yellow-100/80 max-w-3xl mx-auto">
+          <p className="text-orbit-yellow-100/80 max-w-3xl mx-auto animate-fade-in-up delay-100">
             See how financial advisors like you are transforming their practices with targeted lead generation and AI-powered qualification.
           </p>
         </div>
@@ -78,7 +78,7 @@ export const TrustSignals = () => {
         </div>
         
         <div className="text-center mt-16">
-          <CustomButton size="lg">
+          <CustomButton size="lg" className="animate-pulse-light hover:animate-none hover:scale-105 transition-transform duration-300">
             See How Orbit AI Can Deliver These Results
             <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
           </CustomButton>

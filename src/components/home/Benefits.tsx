@@ -44,11 +44,11 @@ export const Benefits = () => {
               key={index} 
               className={cn(
                 "bg-orbit-cosmos-400/70 rounded-xl p-8 shadow-sm border border-orbit-purple-400/20 card-hover",
-                "animate-fade-in-up backdrop-blur-sm",
+                "animate-fade-in-up backdrop-blur-sm transform transition-all duration-500 hover:scale-105 hover:shadow-lg",
               )}
               style={{ animationDelay: `${benefit.delay}ms` }}
             >
-              <div className="w-12 h-12 rounded-lg bg-orbit-orange-500/20 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-lg bg-orbit-orange-500/20 flex items-center justify-center mb-6 transform transition-transform duration-500 hover:rotate-12">
                 <benefit.icon className="text-orbit-orange-400" size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-orbit-yellow-200">{benefit.title}</h3>

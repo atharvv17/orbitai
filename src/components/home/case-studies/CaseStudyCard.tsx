@@ -26,12 +26,12 @@ type CaseStudyProps = {
 export const CaseStudyCard = ({ study, delay }: CaseStudyProps) => {
   return (
     <div 
-      className="glass-card rounded-xl shadow-md hover:shadow-xl transition-all border border-orbit-purple-400/20 overflow-hidden animate-fade-in-up"
+      className="glass-card rounded-xl shadow-md hover:shadow-xl transition-all duration-500 border border-orbit-purple-400/20 overflow-hidden animate-fade-in-up transform hover:scale-[1.02] hover:-translate-y-1"
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="bg-orbit-purple-600/30 p-4 flex items-center justify-between border-b border-orbit-purple-400/20">
         <div className="flex items-center">
-          <div className="bg-orbit-orange-500/20 rounded-full p-2 mr-3">
+          <div className="bg-orbit-orange-500/20 rounded-full p-2 mr-3 animate-pulse-light">
             <Star className="text-orbit-orange-400" size={18} />
           </div>
           <h3 className="font-semibold text-orbit-yellow-200">{study.role}</h3>
@@ -68,17 +68,17 @@ export const CaseStudyCard = ({ study, delay }: CaseStudyProps) => {
               <div className="h-2 bg-orbit-cosmos-300/50 rounded-full overflow-hidden">
                 <div 
                   className={cn(
-                    "h-full rounded-full", 
+                    "h-full rounded-full animate-grow-width", 
                     index === 1 && metric.label.includes("Cost") ? "bg-orbit-orange-500" : "bg-orbit-purple-500"
                   )} 
-                  style={{ width: `${metric.percentage}%` }}
+                  style={{ width: `${metric.percentage}%`, animationDelay: `${delay + 300 + index * 100}ms` }}
                 />
               </div>
             </div>
           ))}
         </div>
         
-        <div className="bg-orbit-cosmos-400/70 p-4 rounded-lg mb-4 border border-orbit-purple-400/20">
+        <div className="bg-orbit-cosmos-400/70 p-4 rounded-lg mb-4 border border-orbit-purple-400/20 transition-all duration-300 hover:bg-orbit-cosmos-400/90">
           <p className="font-semibold text-orbit-yellow-200">Results:</p>
           <p className="text-orbit-yellow-100/80">{study.results}</p>
         </div>
