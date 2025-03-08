@@ -27,13 +27,13 @@ const benefits = [
 export const Benefits = () => {
   return (
     <section className="py-12 relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-orbit-gray-50"></div>
+      <div className="absolute inset-0 -z-10 bg-orbit-cosmos-300/80 backdrop-blur-sm"></div>
       <Container>
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight animate-fade-in text-orbit-yellow-200">
             Designed for Financial Excellence
           </h2>
-          <p className="text-orbit-gray-600 max-w-2xl mx-auto animate-fade-in">
+          <p className="text-orbit-yellow-100/80 max-w-2xl mx-auto animate-fade-in">
             Our platform empowers you to focus on what truly matters: growing your business and serving your clients.
           </p>
         </div>
@@ -43,16 +43,16 @@ export const Benefits = () => {
             <div 
               key={index} 
               className={cn(
-                "bg-white rounded-xl p-8 shadow-sm border border-orbit-gray-100 card-hover",
-                "animate-fade-in-up",
+                "bg-orbit-cosmos-400/70 rounded-xl p-8 shadow-sm border border-orbit-purple-400/20 card-hover",
+                "animate-fade-in-up backdrop-blur-sm",
               )}
               style={{ animationDelay: `${benefit.delay}ms` }}
             >
-              <div className="w-12 h-12 rounded-lg bg-orbit-blue-100 flex items-center justify-center mb-6">
-                <benefit.icon className="text-orbit-blue-600" size={24} />
+              <div className="w-12 h-12 rounded-lg bg-orbit-orange-500/20 flex items-center justify-center mb-6">
+                <benefit.icon className="text-orbit-orange-400" size={24} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-              <p className="text-orbit-gray-600">{benefit.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-orbit-yellow-200">{benefit.title}</h3>
+              <p className="text-orbit-yellow-100/80">{benefit.description}</p>
             </div>
           ))}
         </div>

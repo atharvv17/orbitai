@@ -188,70 +188,71 @@ export const ValueStacking = () => {
   const savings = "$12,662!";
 
   return (
-    <section id="value-stacking" className="py-20 bg-gradient-to-b from-white to-blue-50 relative">
+    <section id="value-stacking" className="py-20 bg-orbit-cosmos-400/80 backdrop-blur-sm relative">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_50%_at_50%_50%,rgba(139,112,255,0.1)_0%,rgba(255,255,255,0)_100%)]"></div>
       <Container>
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-orbit-blue-100 text-orbit-blue-700 text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-orbit-purple-500/10 text-orbit-yellow-300 text-sm font-medium mb-6">
             Value Comparison
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-orbit-yellow-200">
             Save Thousands Every Month
           </h2>
-          <p className="text-orbit-gray-600 max-w-3xl mx-auto">
+          <p className="text-orbit-yellow-100/80 max-w-3xl mx-auto">
             Compare the cost of individual premium tools versus our all-in-one solution. 
             Orbit AI combines everything you need in one affordable package.
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-xl shadow-lg border border-orbit-gray-200">
-          <table className="w-full bg-white">
+        <div className="overflow-x-auto rounded-xl shadow-lg border border-orbit-purple-400/20">
+          <table className="w-full glass-card">
             <thead>
-              <tr className="bg-orbit-blue-600 text-white">
-                <th className="px-4 py-5 text-left">FEATURE</th>
-                <th className="px-4 py-5 text-left">REPLACES</th>
-                <th className="px-4 py-5 text-left">PREMIUM TOOLS COST</th>
-                <th className="px-4 py-5 text-left">YOUR SERVICE</th>
+              <tr className="bg-orbit-purple-600/60 backdrop-blur-sm">
+                <th className="px-4 py-5 text-left text-orbit-yellow-200">FEATURE</th>
+                <th className="px-4 py-5 text-left text-orbit-yellow-200">REPLACES</th>
+                <th className="px-4 py-5 text-left text-orbit-yellow-200">PREMIUM TOOLS COST</th>
+                <th className="px-4 py-5 text-left text-orbit-yellow-200">YOUR SERVICE</th>
               </tr>
             </thead>
             <tbody>
               {features.map((feature, index) => (
                 <tr 
                   key={index} 
-                  className={index % 2 === 0 ? "bg-white" : "bg-orbit-blue-50"}
+                  className={index % 2 === 0 ? "bg-orbit-cosmos-400/50" : "bg-orbit-purple-500/10"}
                 >
-                  <td className="px-4 py-4 font-medium border-t border-orbit-gray-200">
+                  <td className="px-4 py-4 font-medium border-t border-orbit-purple-400/20 text-orbit-yellow-200">
                     {feature.name}
                   </td>
-                  <td className="px-4 py-4 text-orbit-gray-600 border-t border-orbit-gray-200">
+                  <td className="px-4 py-4 text-orbit-yellow-100/70 border-t border-orbit-purple-400/20">
                     {feature.replaces}
                   </td>
-                  <td className="px-4 py-4 text-orbit-gray-800 border-t border-orbit-gray-200">
+                  <td className="px-4 py-4 text-orbit-yellow-200 border-t border-orbit-purple-400/20">
                     {feature.cost}
                   </td>
-                  <td className="px-4 py-4 border-t border-orbit-gray-200">
+                  <td className="px-4 py-4 border-t border-orbit-purple-400/20">
                     {feature.included ? (
                       <div className="flex items-center">
-                        <span className="inline-flex items-center justify-center w-6 h-6 bg-green-100 text-green-600 rounded-full mr-2">
+                        <span className="inline-flex items-center justify-center w-6 h-6 bg-orbit-orange-500/20 text-orbit-orange-300 rounded-full mr-2">
                           <Check size={14} />
                         </span>
-                        <span>Included</span>
+                        <span className="text-orbit-yellow-200">Included</span>
                       </div>
                     ) : feature.unique ? (
-                      <span className="text-orbit-blue-600 font-medium">
+                      <span className="text-orbit-purple-300 font-medium">
                         {feature.guaranteedToWork ? "GUARANTEED TO WORK" : "UNIQUE TO US"}
                       </span>
                     ) : (
-                      <span>-</span>
+                      <span className="text-orbit-yellow-100/50">-</span>
                     )}
                   </td>
                 </tr>
               ))}
-              <tr className="bg-orbit-blue-600 text-white font-bold">
-                <td className="px-4 py-5">OVERALL PRICE</td>
+              <tr className="bg-orbit-purple-600/70 backdrop-blur-sm font-bold">
+                <td className="px-4 py-5 text-orbit-yellow-200">OVERALL PRICE</td>
                 <td className="px-4 py-5"></td>
-                <td className="px-4 py-5">{totalPremiumCost}</td>
-                <td className="px-4 py-5">
-                  {orbitAICost} <span className="font-normal">(SAVE {savings})</span>
+                <td className="px-4 py-5 text-orbit-yellow-200">{totalPremiumCost}</td>
+                <td className="px-4 py-5 text-orbit-yellow-200">
+                  {orbitAICost} <span className="font-normal text-orbit-yellow-300">(SAVE {savings})</span>
                 </td>
               </tr>
             </tbody>
@@ -259,7 +260,7 @@ export const ValueStacking = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-orbit-gray-600 max-w-3xl mx-auto mb-6">
+          <p className="text-orbit-yellow-100/80 max-w-3xl mx-auto mb-6">
             Stop wasting money on multiple tools and services. Get everything you need with Orbit AI's comprehensive solution.
           </p>
         </div>
